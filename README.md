@@ -12,22 +12,19 @@ Api
   The api is a very simple one. This is a rack app and currently only features one conversion route.
   
   
-  * Convert an Image
-  
-  
     # POST /api/images/convert.json
-  
+
     # - conversion            The conversion method you want to perform on the posted file.
     # - file                  This should be a multipart file upload
     # - degrees               This is angle degrees for rotations
-  
+
     # Request
     {
       :file => <MultiPart/>,
       :conversion => 'rotate',
       :degrees => 20
     }
-  
+
     # Response
     {
       :file => 'http://images.convertify.com/120192812.jpg'
