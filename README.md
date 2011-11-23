@@ -14,22 +14,22 @@ Api
   
   * Convert an Image
   
-  `
-  # POST /api/images/convert.json
   
-  # - conversion            The conversion method you want to perform on the posted file.
-  # - file                  This should be a multipart file upload
-  # - degrees               This is angle degrees for rotations
+    # POST /api/images/convert.json
   
-  # Request
-  {
-    :file => <MultiPart/>,
-    :conversion => 'rotate',
-    :degrees => 20
-  }
+    # - conversion            The conversion method you want to perform on the posted file.
+    # - file                  This should be a multipart file upload
+    # - degrees               This is angle degrees for rotations
   
-  # Response
-  {
-    :file => 'http://images.convertify.com/120192812.jpg'
-  }
-  `
+    # Request
+    {
+      :file => <MultiPart/>,
+      :conversion => 'rotate',
+      :degrees => 20
+    }
+  
+    # Response
+    {
+      :file => 'http://images.convertify.com/120192812.jpg'
+    }
+  
