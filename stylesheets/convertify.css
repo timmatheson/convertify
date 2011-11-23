@@ -1,0 +1,51 @@
+body{
+	font-family: 'Helvetica';
+	margin: 0;
+	padding: 0;
+	background: #363636;
+}
+
+.container{
+	margin: 0 auto;
+	width: 950px;
+	background: #E9E9E9;
+}
+
+.padder{
+	margin: 2em 1em;
+	padding: 1em;
+}
+
+ul#navigation{
+	margin: 1em 0;
+	padding: 0;
+}
+
+ul#navigation li{
+	display: inline;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	background: #007AD3;
+	margin: 0 0.2em;
+	padding: 0.5em 1em;
+}
+
+ul#navigation li:first-child{
+	background: #008016;
+}
+
+ul#navigation li a{
+	color: #FFF;
+	text-decoration: none;
+}
+
+code{
+	padding: 1em;
+	display: block;
+	background: #DEDEDE;
+}
+
+.clear{
+	clear: both;
+}
