@@ -10,7 +10,8 @@ module Convertify
   class RequestException < Exception;end;
   
   def self.storage_path
-    @@storage_path ||= File.join(File.dirname(__FILE__), '..', 'images')
+    # @@storage_path ||= File.join(File.dirname(__FILE__), '..', 'images')
+    @@storage_path ||= Dir.tmpdir
   end
   
   def self.load_image( filename )
