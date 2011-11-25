@@ -26,7 +26,7 @@ module Convertify
     
     def self.temp_file( options = {})
       validates_image( options )
-      file = Tempfile.new(options[:filename])
+      file = Tempfile.new(options[:filename] || 'file')
       file.write( options[:file][:tempfile].read )
       file
     end
