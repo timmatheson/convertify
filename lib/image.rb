@@ -16,7 +16,7 @@ module Convertify
       when 'crop'
         return { :url => crop( file, options )}
       when 'resize'
-        return { :url => crop( file, options )}
+        return { :url => resize( file, options )}
       else
         raise RequestException, "Unsupported conversion value. :#{options[:conversion]}"
       end
@@ -35,6 +35,11 @@ module Convertify
       im = Magick::ImageList.new( image.path )
       im.rotate( options[:degrees].to_f ).write( file_write_path("rotated-#{options[:degrees]}-#{options[:file][:filename]}") )
       url(im.filename)
+    end
+    
+    # Crop alias
+    def self.resize( image, options = {})
+      crop(image, options)
     end
     
     # Handles both resize and crop
